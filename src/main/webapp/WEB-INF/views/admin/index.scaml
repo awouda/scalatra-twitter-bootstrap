@@ -1,0 +1,28 @@
+- attributes("title") = "Scalatra: a tiny, Sinatra-like web framework for Scala"
+-@ val admin: String
+-@ val lots: List[scalatrademo.Lot]
+
+%br
+%div.container-fluid
+    %div.hero-unit
+        %h1 Administration
+        %p current administrator: #{admin}
+
+    %div.row-fluid
+        %div.span2
+
+            %ul.nav.nav-tabs.nav-stacked
+            - for (item <-  List("menu item 1","menuitem 2"))
+                %li= item
+
+
+
+        %div.span8
+            %ul
+                - for (lot <- lots)
+                    %li= lot.name
+
+            - render ("subview.scaml")
+
+
+

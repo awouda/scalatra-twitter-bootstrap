@@ -1,0 +1,59 @@
+-@ val title: String
+-@ val body: String
+
+!!!
+%html
+  %head
+    %title= title
+    %meta{:charset => "utf-8"}
+    %meta{:name => "viewport", :content => "with=device-with, initial-scale=1.0"}
+
+    %link{:href => "/assets/css/bootstrap.css", :rel  => "stylesheet"}
+    %link{:href => "/assets/css/bootstrap-responsive.css", :rel  => "stylesheet"}
+    %link{:href => "/assets/css/docs.css", :rel  => "stylesheet"}
+    %link{:href => "/assets/js/google-code-prettify/prettify.css", :rel  => "stylesheet"}
+
+  -# when attirubte has 'dash' (-) character, use the html style for attributes like below
+  %body(data-spy= "scroll"  datatarget = ".bs.docs.sidebar")
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          %button.btn.btn-navbar(type="button" data-toggle="collapse" data-target=".nav-collapse")
+            %span.iconbar
+            %span.iconbar
+            %span.iconbar
+          %a.brand(href="#") Main
+          .nav-collapse.collapse
+            %ul.nav
+              %li.active
+                %a(href="/") Home
+              %li
+                %a(href="/admin/main") Admin
+              %li
+                %a(href="/hello-scalate") hello scalate
+
+
+
+
+
+
+    #content
+      != body
+
+    %script{:type => "text/javascript", :src => "http://platform.twitter.com/widgets.js"}
+    %script{:src => "/assets/js/jquery.js"}
+    %script{:src => "/assets/js/google-code-prettify/prettify.js"}
+    %script{:src => "/assets/js/bootstrap-transition.js"}
+    %script{:src => "/assets/js/bootstrap-alert.js"}
+    %script{:src => "/assets/js/bootstrap-modal.js"}
+    %script{:src => "/assets/js/bootstrap-dropdown.js"}
+    %script{:src => "/assets/js/bootstrap-scrollspy.js"}
+    %script{:src => "/assets/js/bootstrap-tab.js"}
+    %script{:src => "/assets/js/bootstrap-tooltip.js"}
+    %script{:src => "/assets/js/bootstrap-popover.js"}
+    %script{:src => "/assets/js/bootstrap-button.js"}
+    %script{:src => "/assets/js/bootstrap-collapse.js"}
+    %script{:src => "/assets/js/bootstrap-carousel.js"}
+    %script{:src => "/assets/js/bootstrap-typeahead.js"}
+    %script{:src => "/assets/js/bootstrap-affix.js"}
+    %script{:src => "/assets/js/application.js"}
