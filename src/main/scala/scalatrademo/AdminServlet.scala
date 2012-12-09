@@ -1,14 +1,10 @@
 package scalatrademo
 
 import org.scalatra._
-import scalate.ScalateSupport
+import scalate.{ScalateI18nSupport, ScalateSupport}
+import com.jtm.routes.JTMBaseServlet
 
-class AdminServlet extends ScalatraServlet with ScalateSupport {
-
-
-
-
-
+class AdminServlet extends JTMBaseServlet {
 
   before() {
     contentType = "text/html"
